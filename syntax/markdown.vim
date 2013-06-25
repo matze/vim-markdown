@@ -83,6 +83,7 @@ syn region markdownBoldItalic start="\S\@<=___\|___\S\@=" end="\S\@<=___\|___\S\
 syn region markdownCode matchgroup=markdownCodeDelimiter start="`" end="`" keepend contains=markdownLineStart
 syn region markdownCode matchgroup=markdownCodeDelimiter start="`` \=" end=" \=``" keepend contains=markdownLineStart
 syn region markdownCode matchgroup=markdownCodeDelimiter start="^\s*```.*$" end="^\s*```\ze\s*$" keepend
+syn region markdownCode matchgroup=markdownCodeDelimiter start="^\s*\~\~\~.*$" end="^\s*\~\~\~\ze\s*$" keepend
 
 if main_syntax ==# 'markdown'
   for s:type in g:markdown_fenced_languages
